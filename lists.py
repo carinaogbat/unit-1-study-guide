@@ -80,9 +80,10 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-    numbers.sort()
+    new_list = numbers.sorted()
+    smallest = new_list[0]
 
-    return numbers[:1]
+    return smallest
 
 
 def largest_int(numbers):
@@ -158,8 +159,11 @@ def sum_numbers(numbers):
         >>> sum_numbers([])
         0
     """
+    sum_numbers = 0
+    for num in numbers:
+        sum_numbers = num + sum_numbers
 
-    return None
+    return sum_numbers
 
 
 def mult_numbers(numbers):
