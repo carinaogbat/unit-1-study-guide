@@ -80,8 +80,11 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-    numbers.sort()
-    smallest = numbers[0]
+    smallest = None
+    for num in numbers:
+        if smallest is None or num < smallest:
+            smallest = num
+
 
     return smallest
 
@@ -102,9 +105,12 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
+    biggest = None
+    for num in numbers:
+        if biggest is None or num > biggest:
+            biggest = num
 
-
-    return 0
+    return biggest
 
 
 def halvesies(numbers):
@@ -206,8 +212,11 @@ def join_strings(words):
         >>> join_strings([])
         ''
     """
+    joined_strings = ''
+    for item in words:
+        joined_strings = joined_strings + item
 
-    return "Not the right thing"
+    return joined_strings
 
 
 def average(numbers):
@@ -228,8 +237,11 @@ def average(numbers):
     (Think of the best way to handle an empty input list, though,
     a feel free to provide a good solution here.)
     """
-
-    return 0
+    sum_numbers = 0
+    for num in numbers:
+        sum_numbers = num + sum_numbers
+    average = sum_numbers / 2
+    return sum_numbers
 
 
 def join_strings_with_comma(words):
@@ -275,6 +287,7 @@ def reverse_list(items):
         >>> orig
         ['apple', 'berry', 'cherry']
     """
+    items = items.sorted()
 
     return items[::-1]
 
