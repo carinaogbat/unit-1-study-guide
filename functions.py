@@ -94,8 +94,7 @@ def print_product(num1, num2):
 
 def repeat_string(string, num):
     new_string = string * num
-    return new_string
-
+    print(new_string)
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
@@ -148,6 +147,19 @@ def total_meal_price(meal, tip=.15):
 #    Then, write code that shows the calling of this function on a number and
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
+
+def sign_and_parity(num):
+    info_list = []
+    if num > 0:
+        info_list.append("Positive")
+    else:
+            info_list.append("Negative")
+    if num % 2 == 0:
+        info_list.append("Even")
+    else:
+            info_list.append("Odd")
+
+    return info_list
 
 
 ###############################################################################
