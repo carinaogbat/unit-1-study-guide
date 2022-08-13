@@ -80,8 +80,8 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-    new_list = numbers.sorted()
-    smallest = new_list[0]
+    numbers.sort()
+    smallest = numbers[0]
 
     return smallest
 
@@ -185,8 +185,10 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
-
-    return None
+    multiplied_nums = []
+    for num in numbers:
+        multiplied_nums = multiplied_nums * num
+    return multiplied_nums
 
 
 def join_strings(words):
@@ -293,8 +295,8 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-
-    return []
+    items = items[::-1]
+    return items
 
 
 def duplicates(items):
@@ -319,8 +321,12 @@ def duplicates(items):
         >>> orig
         ['apple', 'apple', 'berry']
     """
-
-    return []
+    duplicates = []
+    for item in items:
+        if item in items:
+            duplicates.append(items)
+            duplicates.sort()
+    return duplicates
 
 
 def find_letter_indices(words, letter):
