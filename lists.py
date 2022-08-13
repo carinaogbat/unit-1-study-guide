@@ -248,8 +248,11 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
+    word_list = []
+    for word in words:
+        word_list.append(word)
 
-    return ""
+    return word_list
 
 
 def reverse_list(items):
@@ -273,7 +276,7 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    return items[::-1]
 
 
 def reverse_list_in_place(items):
@@ -295,8 +298,8 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-    items = items[::-1]
-    return items
+
+    return items[::-1]
 
 
 def duplicates(items):
@@ -353,6 +356,12 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
+    count = 0
+    index = []
+    for letter in words:
+        count += 1
+        if letter in words:
+            index.append(count)
 
     return []
 
