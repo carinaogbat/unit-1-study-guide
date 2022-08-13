@@ -77,8 +77,7 @@ def hello_world():
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
 
-def say_hi():
-    name = input("What is your name?")
+def say_hi(name):
     print(f"Hi {name}")
 
 
@@ -134,6 +133,12 @@ def num_spaces(str):
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
 
+def total_meal_price(meal, tip=.15):
+    tip_paid = meal * tip
+    meal_cost = meal + tip_paid
+    return meal_cost
+
+
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
 #    argument and returns two pieces of information as strings --- "Positive"
@@ -152,6 +157,10 @@ def num_spaces(str):
 # 1. Write a function called full_title that takes a name and a job title as
 #    parameters, making it so the job title defaults to "Engineer" if a job
 #    title is not passed in. Return the person's title and name in one string.
+
+def full_title(name, title="Engineer"):
+    name_title = title + " " + name
+    return name_title
 
 # 2. Write a function called write_letter that, given a recipient name & job
 #    title and a sender name, prints the following letter:
